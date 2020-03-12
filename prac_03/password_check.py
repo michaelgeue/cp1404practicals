@@ -1,8 +1,19 @@
-MINIMUM_LENGTH = 4
+def main():
+    minimum_length = 4
+    password = get_password(minimum_length)
+    hide_password(password)
 
-password = input("Password: ({} characters minimum) ".format(MINIMUM_LENGTH))
-while len(password) < MINIMUM_LENGTH:
-    print("Invalid password")
-    password = input("Password: ({} characters minimum) ".format(MINIMUM_LENGTH))
 
-print("*" * len(password))
+def get_password(minimum_length):
+    password = input("Password: ({} characters minimum) ".format(minimum_length))
+    while len(password) < minimum_length:
+        print("Invalid password")
+        password = input("Password: ({} characters minimum) ".format(minimum_length))
+    return password
+
+
+def hide_password(password):
+    print("*" * len(password))
+
+main()
+
