@@ -4,6 +4,7 @@ NUMBERS = [number for number in range(1, 46)]
 
 def main():
     tickets = int(input("How many quick picks? "))
+
     for ticket in range(tickets):
         numbers = []
         while len(numbers) != 6:
