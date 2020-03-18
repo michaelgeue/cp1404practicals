@@ -1,8 +1,11 @@
 def main():
 
-    numbers = []
-    for i in range(5):
-        numbers.append(int(input("Number: ")))
+    numbers = [int(input("Number 1: "))]
+    # Add numbers to list until user enters negative
+    while not numbers[-1] < 0:
+        numbers.append(int(input("Number {}: ".format(len(numbers) + 1))))
+
+    del numbers[-1]
 
     print("The first number is {}".format(numbers[0]))
     print("The last number is {}".format(numbers[-1]))
