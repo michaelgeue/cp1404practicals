@@ -17,5 +17,5 @@ while short_state_code != "":
         print("Invalid short state")
     short_state_code = input("Enter short state: ").upper()
 
-for state in STATE_DICT:
-    print("{:3} is {}".format(state, STATE_DICT[state]))
+for state_name_short, state_name_full in STATE_DICT.items():
+    print("{:3} is {}".format(state_name_short, state_name_full))
