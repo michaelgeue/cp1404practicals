@@ -12,7 +12,7 @@ short_state_code = input("Enter short state: ").upper()
 
 while short_state_code != "":
     if short_state_code in STATE_DICT:
-        print(short_state_code, "is", STATE_DICT[short_state_code])
+        print("{} is {}".format(short_state_code, STATE_DICT[short_state_code]))
     else:
         print("Invalid short state")
     short_state_code = input("Enter short state: ").upper()
