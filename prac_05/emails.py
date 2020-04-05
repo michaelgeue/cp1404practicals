@@ -8,8 +8,7 @@ def main():
             print("E-mail must contain @")
             user_email = input("Email: ")
         else:
-            name = (user_email.split("@")[0]).split(".")
-            name = " ".join(name).title()
+            name = get_name(user_email)
             user_confirm = input("Is your name {}? (y/n) ".format(name)).lower()
 
             while user_confirm not in "yn":
@@ -27,6 +26,12 @@ def main():
 
     for name, email in email_dict.items():
         print("{} ({})".format(name, email))
+
+
+def get_name(user_email):
+    name = (user_email.split("@")[0]).split(".")
+    name = " ".join(name).title()
+    return name
 
 
 main()
