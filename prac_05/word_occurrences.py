@@ -1,13 +1,12 @@
-TEXT_STRING = "this is a collection of words of nice words this is a fun thing it is"
-
-
-def main ():
-    words = TEXT_STRING.split(" ")
+def main():
+    text_string = input("Enter words here: ")
+    words = text_string.split(" ")
     words.sort()
-    word_count_dict = {"Text": TEXT_STRING}
+    print("words")
+    word_count_dict = {"Text": text_string}
 
     for word in words:
-        word_count_dict[word] = word_count_dict.get(word, 1) + 1
+        word_count_dict[word] = word_count_dict.get(word, 0) + 1
 
     longest_word_length = max(len(key) for key in word_count_dict.keys())
 
