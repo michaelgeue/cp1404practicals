@@ -8,7 +8,6 @@ def main():
     guitars = get_guitars_list()
 
     max_name_length = max(len(guitar.name) for guitar in guitars)
-    print(max_name_length)
 
     for i, guitar in enumerate(guitars):
         print("Guitar {}: {:>{}} ({}), worth $ {:10,.2f}{}".format(i + 1, guitar.name, max_name_length, guitar.year,
