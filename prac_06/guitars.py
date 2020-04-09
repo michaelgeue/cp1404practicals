@@ -9,6 +9,7 @@ def main():
 
     max_name_length = max(len(guitar.name) for guitar in guitars)
 
+    print("\nThese are my guitars:")
     for i, guitar in enumerate(guitars):
         print("Guitar {}: {:>{}} ({}), worth $ {:10,.2f}{}".format(i + 1, guitar.name, max_name_length, guitar.year,
                                                                    guitar.cost,
